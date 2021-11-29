@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="598.0" prefWidth="497.0" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminAddEmployeeFormController">
+   <children>
+      <Pane layoutX="21.0" layoutY="105.0" prefHeight="471.0" prefWidth="457.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <JFXButton fx:id="btnAddEmployee" buttonType="RAISED" disable="true" layoutX="65.0" layoutY="404.0" onAction="#addEmployeeOnAction" prefHeight="42.0" prefWidth="327.0" style="-fx-background-color: #0B62A4;" text="ADD EMPLOYEE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblEmployeeId" layoutX="17.0" layoutY="22.0" prefHeight="21.0" prefWidth="97.0" text="Employee ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtMobile" layoutX="142.0" layoutY="70.0" onKeyReleased="#textFieldKeyReleased" prefHeight="31.0" prefWidth="116.0" promptText="Mobile" />
+            <JFXTextField fx:id="txtEmail" layoutX="141.0" layoutY="186.0" onKeyReleased="#textFieldKeyReleased" prefHeight="31.0" prefWidth="213.0" promptText="Email" />
+            <JFXTextField fx:id="txtAddress" alignment="TOP_LEFT" layoutX="141.0" layoutY="236.0" onKeyReleased="#textFieldKeyReleased" prefHeight="70.0" prefWidth="213.0" promptText="Address">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtName" layoutX="141.0" layoutY="14.0" onKeyReleased="#textFieldKeyReleased" prefHeight="21.0" prefWidth="300.0" promptText="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbGender" layoutX="142.0" layoutY="330.0" prefHeight="25.0" prefWidth="116.0" promptText="Gender" />
+            <JFXTextField fx:id="txtNic" layoutX="142.0" layoutY="115.0" onKeyReleased="#textFieldKeyReleased" prefHeight="25.0" prefWidth="116.0" promptText="NIC" />
+            <JFXTextField fx:id="txtDob" layoutX="142.0" layoutY="151.0" onKeyReleased="#textFieldKeyReleased" prefHeight="25.0" prefWidth="116.0" promptText="DOB" />
+            <JFXDatePicker fx:id="txtJoinDate" defaultColor="#130893" layoutX="323.0" layoutY="115.0" prefHeight="25.0" prefWidth="116.0" promptText="Join Date" />
+            <JFXComboBox fx:id="cmbDepartment" layoutX="323.0" layoutY="151.0" prefHeight="25.0" prefWidth="116.0" promptText="department" />
+            <JFXTextField fx:id="txtSalary" layoutX="323.0" layoutY="73.0" onKeyReleased="#textFieldKeyReleased" prefHeight="25.0" prefWidth="116.0" promptText="Salary" />
+            <Label fx:id="lblDepartmentId" layoutX="17.0" layoutY="63.0" prefHeight="21.0" prefWidth="107.0" text="Department ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="21.0" layoutY="18.0" prefHeight="70.0" prefWidth="457.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label layoutX="32.0" prefHeight="70.0" prefWidth="248.0" text="Add Employee">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

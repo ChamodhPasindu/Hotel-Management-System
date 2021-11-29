@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="455.0" prefWidth="420.0" style="-fx-background-color: E9EEF9;" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewRoomDetailFormController">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="17.0" prefHeight="44.0" prefWidth="398.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label layoutX="29.0" prefHeight="44.0" prefWidth="182.0" text="Room Details">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="11.0" layoutY="75.0" prefHeight="366.0" prefWidth="398.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="26.0" layoutY="81.0" text="Type ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="240.0" text=" Price ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="302.0" text="Discount ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDiscount" layoutX="130.0" layoutY="304.0" prefHeight="27.0" prefWidth="233.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="35.0" text="RoomID ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="253.0" layoutY="35.0" text="Floor :">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="129.0" text="Description :">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRoomId" layoutX="130.0" layoutY="35.0" prefHeight="27.0" prefWidth="100.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDescription" alignment="TOP_LEFT" layoutX="130.0" layoutY="129.0" prefHeight="68.0" prefWidth="225.0" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblType" layoutX="130.0" layoutY="81.0" prefHeight="27.0" prefWidth="244.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblFloor" layoutX="310.0" layoutY="35.0" prefHeight="27.0" prefWidth="74.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPrice" layoutX="129.0" layoutY="240.0" prefHeight="27.0" prefWidth="244.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="32.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="80.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="238.0" prefWidth="4.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="303.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

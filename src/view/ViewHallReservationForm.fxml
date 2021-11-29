@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="536.0" prefWidth="600.0" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ViewHallReservationFormController">
+   <children>
+      <AnchorPane layoutX="17.0" layoutY="12.0" prefHeight="44.0" prefWidth="564.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label layoutX="29.0" prefHeight="44.0" prefWidth="315.0" text="Hall Reservation Details">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="18.0" layoutY="79.0" prefHeight="435.0" prefWidth="564.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="19.0" layoutY="24.0" text="Customer ID">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="143.0" prefHeight="27.0" prefWidth="99.0" text="Mobile">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="191.0" text="Email">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmail" layoutX="129.0" layoutY="191.0" prefHeight="27.0" prefWidth="344.0" text="project@gmail.com">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="65.0" prefHeight="27.0" prefWidth="99.0" text="Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="233.0" prefHeight="27.0" prefWidth="81.0" text="Address">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="102.0" prefHeight="27.0" prefWidth="90.0" text="NIC">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblName" layoutX="129.0" layoutY="65.0" prefHeight="27.0" prefWidth="419.0" text="M.A.D.C Pasindu">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNic" alignment="TOP_LEFT" layoutX="129.0" layoutY="102.0" prefHeight="27.0" prefWidth="284.0" text="1234567890V" wrapText="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCusId" layoutX="129.0" layoutY="24.0" prefHeight="27.0" prefWidth="144.0" text="CT-0000">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAddress" layoutX="129.0" layoutY="233.0" prefHeight="27.0" prefWidth="419.0" text="Panadura">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNumber" layoutX="129.0" layoutY="143.0" prefHeight="27.0" prefWidth="244.0" text="0781234567">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="275.0" prefHeight="27.0" prefWidth="81.0" text="Province">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblProvince" layoutX="129.0" layoutY="275.0" prefHeight="27.0" prefWidth="419.0" text="Western">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="282.0" layoutY="24.0" prefHeight="27.0" prefWidth="120.0" text="Reservation ID">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblReservationId" layoutX="413.0" layoutY="24.0" prefHeight="27.0" prefWidth="120.0" text="HR-000001">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="329.0" prefHeight="27.0" prefWidth="128.0" text="Check In Date">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCheckIn" layoutX="173.0" layoutY="329.0" prefHeight="27.0" prefWidth="128.0" text="2021-09-09">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="365.0" prefHeight="27.0" prefWidth="128.0" text="Check Out Date">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCheckOut" layoutX="173.0" layoutY="365.0" prefHeight="27.0" prefWidth="128.0" text="2021-09-12">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="22.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="64.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="99.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="141.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="188.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="230.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="158.0" layoutY="323.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="158.0" layoutY="364.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="120.0" layoutY="273.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="403.0" layoutY="21.0" text=":">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="655.0" prefWidth="1135.0" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RecCheckInFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="67.0" prefWidth="957.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label layoutX="78.0" prefHeight="70.0" prefWidth="182.0" text="Check In">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="33.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/icons8_hotel_check_in_50px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="971.0" layoutY="7.0" prefHeight="70.0" prefWidth="157.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="-2.0" layoutY="1.0" prefHeight="21.0" prefWidth="157.0" text="dd/mm/yyyy">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" alignment="CENTER" layoutX="-2.0" layoutY="22.0" prefHeight="47.0" prefWidth="157.0" text="hh/mm">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TabPane layoutX="14.0" layoutY="87.0" prefHeight="551.0" prefWidth="1104.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Room Reservation">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="57.0" prefHeight="451.0" prefWidth="846.0" style="-fx-background-color: white;" styleClass="pane-two">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Reservation Details">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="64.0" prefHeight="30.0" prefWidth="174.0" text="Customer ID          ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="102.0" prefHeight="30.0" prefWidth="174.0" text="Customer Name    ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="143.0" prefHeight="30.0" prefWidth="174.0" text="NIC                        ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="180.0" prefHeight="30.0" prefWidth="174.0" text="Mobile                   ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="274.0" prefHeight="30.0" prefWidth="174.0" text="Email                      ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="217.0" prefHeight="30.0" prefWidth="174.0" text="Address                  ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="311.0" prefHeight="30.0" prefWidth="174.0" text="Province                ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="468.0" layoutY="180.0" prefHeight="30.0" prefWidth="159.0" text="Breakfast">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="468.0" layoutY="217.0" prefHeight="30.0" prefWidth="159.0" text="Lunch">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="468.0" layoutY="254.0" prefHeight="30.0" prefWidth="159.0" text="Dinner">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="468.0" layoutY="101.0" prefHeight="30.0" prefWidth="159.0" text="Reserved Date">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="468.0" layoutY="139.0" prefHeight="30.0" prefWidth="159.0" text="No of Guests">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="353.0" prefHeight="30.0" prefWidth="174.0" text="Check In Date        ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="391.0" prefHeight="30.0" prefWidth="174.0" text="Check Out Date     ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCusId" layoutX="214.0" layoutY="64.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCusName" layoutX="214.0" layoutY="102.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblNic" layoutX="214.0" layoutY="143.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblMobile" layoutX="214.0" layoutY="180.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblAddress" alignment="TOP_LEFT" layoutX="214.0" layoutY="217.0" prefHeight="58.0" prefWidth="225.0" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblEmail" layoutX="214.0" layoutY="274.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCheckIn" layoutX="214.0" layoutY="353.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCheckOut" layoutX="214.0" layoutY="391.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblProvince" layoutX="214.0" layoutY="311.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="64.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="102.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="139.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="177.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="217.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="274.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="311.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="349.0" prefWidth="5.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="387.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblNoOfGuest" layoutX="687.0" layoutY="139.0" prefHeight="30.0" prefWidth="159.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblDinner" layoutX="687.0" layoutY="254.0" prefHeight="30.0" prefWidth="159.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblLunch" layoutX="687.0" layoutY="217.0" prefHeight="30.0" prefWidth="159.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblBreakfast" layoutX="687.0" layoutY="180.0" prefHeight="30.0" prefWidth="159.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblReserveDate" layoutX="687.0" layoutY="101.0" prefHeight="30.0" prefWidth="159.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="678.0" layoutY="253.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="678.0" layoutY="215.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="678.0" layoutY="177.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="678.0" layoutY="137.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="678.0" layoutY="101.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="678.0" layoutY="62.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="468.0" layoutY="64.0" prefHeight="30.0" prefWidth="159.0" text="Reservation ID">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblReserveId" layoutX="687.0" layoutY="64.0" prefHeight="30.0" prefWidth="159.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tblReserveRooms" layoutX="445.0" layoutY="313.0" prefHeight="124.0" prefWidth="136.0">
+                                 <columns>
+                                    <TableColumn fx:id="colRooms" prefWidth="135.0" text="Reserve Rooms" />
+                                 </columns>
+                              </TableView>
+                              <TableView fx:id="tblService" layoutX="678.0" layoutY="313.0" prefHeight="124.0" prefWidth="136.0">
+                                 <columns>
+                                    <TableColumn fx:id="colService" prefWidth="132.0" text="Services" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <Pane layoutX="890.0" layoutY="57.0" prefHeight="451.0" prefWidth="200.0" style="-fx-background-color: white;" styleClass="pane-two">
+                           <children>
+                              <Label layoutX="9.0" layoutY="61.0" prefHeight="30.0" prefWidth="80.0" text="Advance">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="9.0" layoutY="31.0" prefHeight="30.0" prefWidth="80.0" text="Total">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="9.0" layoutY="304.0" prefHeight="30.0" prefWidth="73.0" text="Balance">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotal" alignment="TOP_RIGHT" layoutX="97.0" layoutY="31.0" prefHeight="30.0" prefWidth="94.0" text="0.00">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblAdvance" alignment="TOP_RIGHT" layoutX="98.0" layoutY="61.0" prefHeight="30.0" prefWidth="94.0" text="0.00">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblBalance" alignment="TOP_RIGHT" layoutX="98.0" layoutY="304.0" prefHeight="30.0" prefWidth="94.0" text="0.00">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="btnRoomCheckIn" buttonType="RAISED" disable="true" layoutX="13.0" layoutY="362.0" onAction="#checkInRoomOnAction" prefHeight="35.0" prefWidth="174.0" style="-fx-background-color: #0B62A4;" styleClass="btn" text="CHECK IN GUEST" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="btnRoomPrintToken" buttonType="RAISED" disable="true" layoutX="13.0" layoutY="406.0" onAction="#printTokenForRoomOnAction" prefHeight="35.0" prefWidth="174.0" style="-fx-background-color: #E73403;" styleClass="btn" text="PRINT TOKEN" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <Label layoutX="9.0" layoutY="91.0" prefHeight="70.0" prefWidth="80.0" text="Extra Payment" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="txtExtraPayment" alignment="CENTER_RIGHT" disable="true" layoutX="98.0" layoutY="101.0" onAction="#extraPaymentForRoomOnAction" prefHeight="39.0" prefWidth="94.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </Pane>
+                        <TextField fx:id="txtSearchRoomReservationId" layoutX="383.0" layoutY="1.0" onAction="#searchRoomReservationIdOnAction" prefHeight="30.0" prefWidth="338.0" promptText="Search Room Reservation ID" styleClass="text-search" />
+                        <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="691.0" layoutY="5.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/icons8_search_30px_1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Hall Reservation">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="57.0" prefHeight="451.0" prefWidth="846.0" style="-fx-background-color: white;" styleClass="pane-two">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Reservation Details">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="64.0" prefHeight="30.0" prefWidth="174.0" text="Customer ID          ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="102.0" prefHeight="30.0" prefWidth="174.0" text="Customer Name    ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="143.0" prefHeight="30.0" prefWidth="174.0" text="NIC                        ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="180.0" prefHeight="30.0" prefWidth="174.0" text="Mobile                   ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="274.0" prefHeight="30.0" prefWidth="174.0" text="Email                      ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="217.0" prefHeight="30.0" prefWidth="174.0" text="Address                  ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="33.0" layoutY="311.0" prefHeight="30.0" prefWidth="174.0" text="Province                ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="468.0" layoutY="101.0" prefHeight="30.0" prefWidth="159.0" text="Reserved Date">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="468.0" layoutY="143.0" prefHeight="30.0" prefWidth="174.0" text="Check In Date        ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="468.0" layoutY="184.0" prefHeight="30.0" prefWidth="174.0" text="Check Out Date     ">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCusId1" layoutX="214.0" layoutY="64.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCusName1" layoutX="214.0" layoutY="102.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblNic1" layoutX="214.0" layoutY="143.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblMobile1" layoutX="214.0" layoutY="180.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblAddress1" alignment="TOP_LEFT" layoutX="214.0" layoutY="217.0" prefHeight="58.0" prefWidth="225.0" wrapText="true">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblEmail1" layoutX="214.0" layoutY="274.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCheckIn1" layoutX="690.0" layoutY="143.0" prefHeight="30.0" prefWidth="157.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblCheckOut1" layoutX="690.0" layoutY="184.0" prefHeight="30.0" prefWidth="157.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblProvince1" layoutX="214.0" layoutY="311.0" prefHeight="30.0" prefWidth="225.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="64.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="102.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="139.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="177.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="217.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="274.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="205.0" layoutY="311.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="677.0" layoutY="244.0" prefWidth="5.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="678.0" layoutY="143.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblReserveDate1" layoutX="687.0" layoutY="101.0" prefHeight="30.0" prefWidth="159.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="679.0" layoutY="101.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="677.0" layoutY="62.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="468.0" layoutY="64.0" prefHeight="30.0" prefWidth="159.0" text="Reservation ID">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblReserveId1" layoutX="687.0" layoutY="64.0" prefHeight="30.0" prefWidth="159.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="469.0" layoutY="244.0" prefHeight="30.0" prefWidth="174.0" text="Hall ID">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblHallId" layoutX="689.0" layoutY="244.0" prefHeight="30.0" prefWidth="157.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="677.0" layoutY="184.0" text=":">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Pane layoutX="890.0" layoutY="57.0" prefHeight="451.0" prefWidth="200.0" style="-fx-background-color: white;" styleClass="pane-two">
+                           <children>
+                              <Label layoutX="9.0" layoutY="61.0" prefHeight="30.0" prefWidth="80.0" text="Advance">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="9.0" layoutY="31.0" prefHeight="30.0" prefWidth="80.0" text="Total">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="9.0" layoutY="304.0" prefHeight="30.0" prefWidth="73.0" text="Balance">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblTotal1" alignment="TOP_RIGHT" layoutX="98.0" layoutY="31.0" prefHeight="30.0" prefWidth="94.0" text="0.00">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblAdvance1" alignment="TOP_RIGHT" layoutX="98.0" layoutY="61.0" prefHeight="30.0" prefWidth="94.0" text="0.00">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblBalance1" alignment="TOP_RIGHT" layoutX="98.0" layoutY="304.0" prefHeight="30.0" prefWidth="94.0" text="0.00">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXButton fx:id="btnHallCheckIn" buttonType="RAISED" disable="true" layoutX="13.0" layoutY="362.0" onAction="#checkInHallOnAction" prefHeight="35.0" prefWidth="174.0" style="-fx-background-color: #0B62A4;" styleClass="btn" text="CHECK IN GUEST" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="btnHallPrintToken" buttonType="RAISED" disable="true" layoutX="13.0" layoutY="406.0" onAction="#printTokenForHallOnAction" prefHeight="35.0" prefWidth="174.0" style="-fx-background-color: #E73403;" styleClass="btn" text="PRINT TOKEN" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <Label layoutX="9.0" layoutY="91.0" prefHeight="70.0" prefWidth="80.0" text="Extra Payment" wrapText="true">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField fx:id="txtExtraPayment1" alignment="CENTER_RIGHT" disable="true" layoutX="98.0" layoutY="101.0" onAction="#extraPaymentForHallOnAction" prefHeight="39.0" prefWidth="94.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </Pane>
+                        <TextField fx:id="txtSearchHallReservationId1" layoutX="383.0" layoutY="1.0" onAction="#searchHallReservationIdOnAction" prefHeight="30.0" prefWidth="338.0" promptText="Search Hall Reservation ID" styleClass="text-search" />
+                        <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="691.0" layoutY="5.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/icons8_search_30px_1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

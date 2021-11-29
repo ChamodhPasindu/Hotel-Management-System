@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="655.0" prefWidth="1135.0" style="-fx-background-color: E9EEF9;" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RecComplainsFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="56.0" prefWidth="957.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label layoutX="78.0" prefHeight="70.0" prefWidth="182.0" text="Complains">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="32.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/icons8_commercial_50px_2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="41.0" layoutY="154.0" prefHeight="471.0" prefWidth="365.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Complain Details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomerId" layoutX="22.0" layoutY="66.0" text="Customer ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomerName" layoutX="20.0" layoutY="130.0" text="Customer Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblEmail" layoutX="22.0" layoutY="186.0" text="Email">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnSubmit" buttonType="RAISED" disable="true" layoutX="242.0" layoutY="412.0" onAction="#submitComplainOnAction" prefHeight="35.0" prefWidth="94.0" style="-fx-background-color: #0B62A4;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblComplainId" alignment="CENTER_RIGHT" layoutX="224.0" layoutY="14.0" prefHeight="21.0" prefWidth="108.0" text="Complain ID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtDescription" alignment="TOP_LEFT" disable="true" layoutX="20.0" layoutY="236.0" prefHeight="108.0" prefWidth="298.0" promptText="Description">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="434.0" layoutY="154.0" prefHeight="471.0" prefWidth="657.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Pending Complains">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblComplainList" layoutX="17.0" layoutY="96.0" prefHeight="352.0" prefWidth="626.0">
+              <columns>
+                <TableColumn fx:id="colComplainId" prefWidth="83.0" text="Complain Id" />
+                <TableColumn fx:id="colCustomerName" prefWidth="200.0" text="Customer Name" />
+                  <TableColumn fx:id="colDate" prefWidth="112.0" text="Date" />
+                  <TableColumn fx:id="colTime" prefWidth="75.0" text="Time" />
+                  <TableColumn fx:id="colDescription" minWidth="2.0" prefWidth="154.0" text="Description" />
+              </columns>
+            </TableView>
+         </children>
+      </Pane>
+      <Pane layoutX="971.0" layoutY="8.0" prefHeight="70.0" prefWidth="157.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="-2.0" layoutY="1.0" prefHeight="21.0" prefWidth="157.0" text="dd/mm/yyyy">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" alignment="CENTER" layoutX="-2.0" layoutY="22.0" prefHeight="47.0" prefWidth="157.0" text="hh/mm">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtSearchNic" layoutX="55.0" layoutY="104.0" onAction="#searchCustomerOnAction" prefHeight="30.0" prefWidth="338.0" promptText="Search NIC" styleClass="text-search">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="363.0" layoutY="108.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/icons8_search_30px_1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainContext" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <AnchorPane fx:id="subContext" prefHeight="713.0" prefWidth="1367.0">
+         <children>
+            <ImageView fitHeight="713.0" fitWidth="1377.0" pickOnBounds="true">
+               <image>
+                  <Image url="@assets/images/bg.jpg" />
+               </image>
+            </ImageView>
+            <Pane layoutX="208.0" layoutY="189.0" prefHeight="404.0" prefWidth="951.0" style="-fx-background-color: white;" styleClass="pane-log">
+               <children>
+                  <ImageView id="pane" fitHeight="389.0" fitWidth="505.0" layoutX="44.0" layoutY="8.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@assets/images/hotel_login.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="647.0" layoutY="36.0" text="Login to your account">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="paneWarning" layoutX="620.0" layoutY="82.0" prefHeight="179.0" prefWidth="285.0">
+                     <children>
+                        <JFXTextField fx:id="txtUserName" focusColor="#5e7ee1" labelFloat="true" layoutX="27.0" layoutY="26.0" onKeyReleased="#textFieldKeyReleased" prefHeight="36.0" prefWidth="233.0" promptText="User Name">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXPasswordField fx:id="txtUserPassword" labelFloat="true" layoutX="27.0" layoutY="90.0" onKeyReleased="#textFieldKeyReleased" prefHeight="36.0" prefWidth="233.0" promptText="Password" styleClass="button-one">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXPasswordField>
+                        <Label fx:id="lblWarning" alignment="TOP_LEFT" layoutX="28.0" layoutY="128.0" prefHeight="36.0" prefWidth="233.0" text="Your username or password is incorrect !" textFill="RED" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="22.0" layoutX="237.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/icons8_customer_50px_1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="45.0" fitWidth="22.0" layoutX="236.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/images/icons8_key_2_50px.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="620.0" layoutY="275.0" prefHeight="72.0" prefWidth="285.0">
+                     <children>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="25.0" layoutY="14.0" onAction="#loginOnAction" prefHeight="45.0" prefWidth="241.0" style="-fx-background-color: #E73403;" styleClass="btn" text="Login" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Label alignment="CENTER" layoutX="5.0" layoutY="65.0" prefHeight="58.0" prefWidth="1367.0" text="Welcome to White Star Hotel">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

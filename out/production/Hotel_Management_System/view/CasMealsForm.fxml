@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="655.0" prefWidth="1135.0" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CasMealsFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="67.0" prefWidth="957.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label layoutX="87.0" layoutY="1.0" prefHeight="70.0" prefWidth="182.0" text="Meals">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="33.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/icons8_food_50px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="39.0" layoutY="131.0" prefHeight="485.0" prefWidth="276.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Add New Meal ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAddFoodId" layoutX="39.0" layoutY="69.0" text="Food ID">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtAddPrice" layoutX="36.0" layoutY="214.0" prefHeight="39.0" prefWidth="205.0" promptText="Price">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnAdd" buttonType="RAISED" layoutX="175.0" layoutY="430.0" onAction="#addFoodOnAction" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #0B62A4;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtAddDescription" alignment="TOP_LEFT" layoutX="36.0" layoutY="136.0" prefHeight="27.0" prefWidth="205.0" promptText="Description">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="340.0" layoutY="131.0" prefHeight="485.0" prefWidth="276.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Update Meal Details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblUpdateFoodId" layoutX="45.0" layoutY="66.0" text="Food ID">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUpdatePrice" layoutX="40.0" layoutY="216.0" prefHeight="39.0" prefWidth="205.0" promptText="Price">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="190.0" layoutY="427.0" onAction="#updateFoodOnAction" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #0B62A4;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtUpdateDescription" alignment="TOP_LEFT" layoutX="40.0" layoutY="138.0" prefHeight="39.0" prefWidth="205.0" promptText="Description">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+      <Pane layoutX="641.0" layoutY="131.0" prefHeight="485.0" prefWidth="459.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Current Dish List">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblDish" layoutX="35.0" layoutY="99.0" prefHeight="326.0" prefWidth="405.0">
+              <columns>
+                <TableColumn fx:id="colFood" prefWidth="83.0" text="Food ID" />
+                <TableColumn fx:id="colDescription" prefWidth="215.0" text="Description" />
+                  <TableColumn fx:id="colPrice" prefWidth="106.0" text="Price" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="290.0" layoutY="435.0" onAction="#deleteOnAction" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: DD4B39;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnView" buttonType="RAISED" layoutX="372.0" layoutY="436.0" onAction="#viewOnAction" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #0B62A4;" text="View" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="971.0" layoutY="8.0" prefHeight="70.0" prefWidth="157.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="-2.0" layoutY="1.0" prefHeight="21.0" prefWidth="157.0" text="dd/mm/yyyy">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" alignment="CENTER" layoutX="-2.0" layoutY="22.0" prefHeight="47.0" prefWidth="157.0" text="hh/mm">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

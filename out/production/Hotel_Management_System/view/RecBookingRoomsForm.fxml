@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="655.0" prefWidth="1135.0" styleClass=".btn-one" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RecBookingRoomsFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="67.0" prefWidth="957.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label layoutX="78.0" layoutY="1.0" prefHeight="70.0" prefWidth="237.0" text="Booking Rooms">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/icons8_bed_50px_2.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="17.0" layoutY="122.0" prefHeight="517.0" prefWidth="370.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="16.0" layoutY="4.0" text="Room Availability">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblRoomAvailability" layoutX="16.0" layoutY="107.0" prefHeight="357.0" prefWidth="338.0">
+              <columns>
+                <TableColumn fx:id="colRoomId" prefWidth="154.0" text="Room ID" />
+                <TableColumn fx:id="colType" prefWidth="183.0" text="Type" />
+              </columns>
+            </TableView>
+            <JFXDatePicker fx:id="txtCheckDate" defaultColor="#36369d" layoutX="82.0" layoutY="58.0" prefHeight="25.0" prefWidth="94.0" promptText="Check In" />
+            <JFXButton fx:id="btnSelect" buttonType="RAISED" disable="true" layoutX="304.0" layoutY="478.0" onAction="#selectRoomOnAction" style="-fx-background-color: DD4B39;" text="Selcet" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnView" buttonType="RAISED" disable="true" layoutX="246.0" layoutY="478.0" onAction="#viewRoomDetailOnAction" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: #0B62A4;" text="View" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXDatePicker fx:id="txtCheckOutDate" defaultColor="#36369d" layoutX="194.0" layoutY="58.0" prefHeight="25.0" prefWidth="102.0" promptText="Check Out" />
+            <JFXButton buttonType="RAISED" layoutX="306.0" layoutY="58.0" onAction="#loadAvailableRoomOnAction" prefHeight="21.0" prefWidth="50.0" style="-fx-background-color: #0B62A4;" text="Load" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children></Pane>
+      <Pane fx:id="paneReservation" layoutX="401.0" layoutY="122.0" prefHeight="517.0" prefWidth="381.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="17.0" layoutY="134.0" prefHeight="26.0" prefWidth="102.0" text="Room Details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblBookingRoom" layoutX="17.0" layoutY="160.0" prefHeight="131.0" prefWidth="348.0">
+              <columns>
+                <TableColumn fx:id="colRoomId2" prefWidth="69.0" text="Room ID" />
+                <TableColumn fx:id="colType2" prefWidth="120.0" text="Type" />
+                  <TableColumn fx:id="colDiscount" prefWidth="77.0" text="Discount" />
+                  <TableColumn fx:id="colPrice" prefWidth="82.0" text="Price" />
+              </columns>
+            </TableView>
+            <Label layoutX="18.0" layoutY="291.0" prefHeight="26.0" prefWidth="157.0" text="Meal Package Details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbBreakfast" layoutX="17.0" layoutY="330.0" prefHeight="25.0" prefWidth="102.0" promptText="Breakfast" />
+            <JFXComboBox fx:id="cmbLunch" layoutX="140.0" layoutY="330.0" prefHeight="25.0" prefWidth="102.0" promptText="Lunch" />
+            <JFXComboBox fx:id="cmbDinner" layoutX="263.0" layoutY="330.0" prefHeight="25.0" prefWidth="102.0" promptText="Dinner" />
+            <Label layoutX="18.0" layoutY="410.0" prefHeight="26.0" prefWidth="157.0" text="Other Service Details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbService" layoutX="18.0" layoutY="447.0" prefHeight="25.0" prefWidth="102.0" promptText="Service" />
+            <JFXTextField fx:id="txtNoOfDays" disable="true" layoutX="141.0" layoutY="447.0" onAction="#NoOfDayOnAction" prefHeight="25.0" prefWidth="102.0" promptText="No of Days" />
+            <JFXButton fx:id="btnDone" buttonType="RAISED" disable="true" layoutX="107.0" layoutY="373.0" onAction="#DoneOnAction" prefHeight="25.0" prefWidth="167.0" style="-fx-background-color: DD4B39;" text="Done" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblCustomerId" layoutX="124.0" layoutY="40.0" prefHeight="21.0" prefWidth="248.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtNoOfGuest" layoutX="18.0" layoutY="96.0" prefHeight="25.0" prefWidth="102.0" promptText="No of guests" />
+            <JFXDatePicker fx:id="txtCheckIn" defaultColor="#36369d" layoutX="141.0" layoutY="96.0" prefHeight="25.0" prefWidth="102.0" promptText="Check In" />
+            <JFXDatePicker fx:id="txtCheckOut" defaultColor="#36369d" layoutX="264.0" layoutY="96.0" prefHeight="25.0" prefWidth="102.0" promptText="Check Out" />
+            <Label layoutX="17.0" layoutY="4.0" text="Reservation Details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblReservationId" alignment="CENTER_RIGHT" layoutX="242.0" layoutY="4.0" prefHeight="21.0" prefWidth="125.0" text="Reservation ID">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblCustomerName" layoutX="124.0" layoutY="61.0" prefHeight="21.0" prefWidth="248.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="40.0" prefHeight="21.0" prefWidth="109.0" text="Customer ID        :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="61.0" prefHeight="21.0" prefWidth="109.0" text="Customer Name  :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <JFXButton buttonType="RAISED" layoutX="17.0" layoutY="84.0" onAction="#openAddGuestOnAction" prefHeight="21.0" prefWidth="144.0" style="-fx-background-color: #0B62A4;" styleClass="btn-one" text="ADD GUEST" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <AnchorPane layoutX="796.0" layoutY="122.0" prefHeight="517.0" prefWidth="325.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="17.0" layoutY="1.0" prefHeight="26.0" prefWidth="144.0" text="Reservation Charges">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="46.0" prefHeight="31.0" prefWidth="136.0" text="Rooms">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="87.0" text="meal Packages">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="131.0" prefHeight="31.0" prefWidth="135.0" text="Services">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblRoomPrice" alignment="CENTER_RIGHT" layoutX="190.0" layoutY="46.0" prefHeight="31.0" prefWidth="123.0" text="0.00">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblServicePrice" alignment="CENTER_RIGHT" layoutX="192.0" layoutY="131.0" prefHeight="31.0" prefWidth="123.0" text="0.00">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMealPackagePrice" alignment="CENTER_RIGHT" layoutX="192.0" layoutY="87.0" prefHeight="31.0" prefWidth="123.0" text="0.00">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="12.0" layoutY="177.0" prefHeight="31.0" prefWidth="135.0" text="Total">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnReserve" buttonType="RAISED" disable="true" layoutX="17.0" layoutY="447.0" onAction="#reserveOnAction" prefHeight="35.0" prefWidth="292.0" style="-fx-background-color: #0B62A4;" text="RESERVE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="17.0" layoutY="350.0" prefHeight="31.0" prefWidth="135.0" text="Advance">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtAdvance" alignment="CENTER_RIGHT" disable="true" layoutX="192.0" layoutY="343.0" onAction="#AdvanceOnAction" prefHeight="45.0" prefWidth="123.0">
+               <font>
+                  <Font size="21.0" />
+               </font></JFXTextField>
+            <Label fx:id="lblTotal" alignment="CENTER_RIGHT" layoutX="192.0" layoutY="177.0" prefHeight="31.0" prefWidth="123.0" text="0.00">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="399.0" prefHeight="31.0" prefWidth="135.0" text="Balance">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblBalance" alignment="CENTER_RIGHT" layoutX="190.0" layoutY="399.0" prefHeight="31.0" prefWidth="123.0" text="0.00">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="46.0" text="Rs">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="87.0" text="Rs">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="131.0" text="Rs">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="176.0" text="Rs">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="348.0" text="Rs">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="170.0" layoutY="397.0" text="Rs">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="971.0" layoutY="8.0" prefHeight="70.0" prefWidth="157.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="-2.0" layoutY="1.0" prefHeight="21.0" prefWidth="157.0" text="dd/mm/yyyy">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" alignment="CENTER" layoutX="-2.0" layoutY="22.0" prefHeight="47.0" prefWidth="157.0" text="hh/mm">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtSearchCustomer" layoutX="423.0" layoutY="85.0" onAction="#searchCustomerNicOnAction" prefHeight="30.0" prefWidth="338.0" promptText="Search NIC" styleClass="text-search" />
+      <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="730.0" layoutY="89.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/icons8_search_30px_1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

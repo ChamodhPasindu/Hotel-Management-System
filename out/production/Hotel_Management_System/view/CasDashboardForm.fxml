@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainContext" prefHeight="655.0" prefWidth="1135.0" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CasDashboardFormController">
+   <children>
+      <Pane prefHeight="59.0" prefWidth="1368.0" style="-fx-background-color: #5050FF;">
+         <children>
+            <Label alignment="CENTER" prefHeight="59.0" prefWidth="260.0" text="White Star Hotel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <JFXButton graphicTextGap="6.0" layoutX="1232.0" layoutY="7.0" onAction="#logOutOnAction" prefHeight="44.0" prefWidth="136.0" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_logout_rounded_up_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="button-two" />
+                  <String fx:value="button-one" />
+               </styleClass>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutY="59.0" prefHeight="655.0" prefWidth="233.0" style="-fx-background-color: #2C3539;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="74.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/icons8_test_account_50px_1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblUserName" layoutX="117.0" layoutY="14.0" prefHeight="37.0" prefWidth="108.0" text="&lt;user&gt;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="117.0" layoutY="41.0" prefHeight="45.0" prefWidth="100.0" text="Cashier" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="12.0" fitWidth="16.0" layoutX="101.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/icons8_new_moon_50px.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnDashboard" alignment="TOP_LEFT" graphicTextGap="10.0" layoutX="6.0" layoutY="172.0" onAction="#openCasDashboardOnAction" prefHeight="44.0" prefWidth="220.0" style="-fx-background-color: #F24937;" styleClass="button-one" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_dashboard_30px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnMeals" alignment="TOP_LEFT" graphicTextGap="12.0" layoutX="7.0" layoutY="216.0" onAction="#openCasMealsOnAction" prefHeight="44.0" prefWidth="220.0" styleClass="button-one" text="Meals" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_food_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label alignment="CENTER" layoutY="122.0" opacity="0.5" prefHeight="29.0" prefWidth="233.0" style="-fx-background-color: #7C8589;" text="MAIN NAVIGATION" textFill="#2c3539">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnReports" alignment="TOP_LEFT" graphicTextGap="12.0" layoutX="7.0" layoutY="260.0" onAction="#openCasReportsOnAction" prefHeight="44.0" prefWidth="220.0" styleClass="button-one" text="Reports" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_ratings_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="subContext" layoutX="233.0" layoutY="59.0" prefHeight="655.0" prefWidth="1135.0" style="-fx-background-color: #E9EEF9;">
+         <children>
+            <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="67.0" prefWidth="957.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+               <children>
+                  <Label layoutX="78.0" prefHeight="70.0" prefWidth="182.0" text="Dashboard">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="33.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_dashboard_30px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="741.0" layoutY="130.0" prefHeight="476.0" prefWidth="362.0" style="-fx-background-color: white;" styleClass="pane-two">
+               <children>
+                  <TableView fx:id="tblCart" layoutX="23.0" layoutY="71.0" prefHeight="308.0" prefWidth="317.0">
+                    <columns>
+                      <TableColumn fx:id="colItem" prefWidth="119.0" text="Item" />
+                      <TableColumn fx:id="colQty" prefWidth="93.0" text="Quantity" />
+                        <TableColumn fx:id="colPrice" prefWidth="104.0" text="Price" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="30.0" prefWidth="123.0" text="Bill Details">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="393.0" prefHeight="19.0" prefWidth="100.0" text="Sub Total">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtTotal" alignment="CENTER_RIGHT" layoutX="248.0" layoutY="393.0" prefHeight="19.0" prefWidth="100.0" text="0.00">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnPrintBill" buttonType="RAISED" disable="true" layoutX="100.0" layoutY="427.0" onAction="#printBillOnAction" prefHeight="35.0" prefWidth="190.0" style="-fx-background-color: #0B62A4;" text="PRINT BILL" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label fx:id="lblBillId" alignment="CENTER_RIGHT" layoutX="221.0" layoutY="19.0" prefHeight="21.0" prefWidth="130.0" text="Bill ID">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="232.0" layoutY="130.0" prefHeight="476.0" prefWidth="484.0" style="-fx-background-color: white;" styleClass="pane-two">
+               <children>
+                  <Label layoutX="42.0" layoutY="101.0" prefHeight="30.0" prefWidth="123.0" text="Food ID">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="153.0" prefHeight="30.0" prefWidth="123.0" text="Unit Price">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="42.0" layoutY="211.0" prefHeight="30.0" prefWidth="123.0" text="Description">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtQty" alignment="CENTER_RIGHT" layoutX="307.0" layoutY="318.0" prefHeight="44.0" prefWidth="123.0" promptText="Quantity">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label fx:id="lblDescription" alignment="CENTER_RIGHT" layoutX="304.0" layoutY="206.0" prefHeight="37.0" prefWidth="130.0" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblFoodId" alignment="CENTER_RIGHT" layoutX="304.0" layoutY="101.0" prefHeight="30.0" prefWidth="130.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblUnitPrice" alignment="CENTER_RIGHT" layoutX="304.0" layoutY="153.0" prefHeight="30.0" prefWidth="130.0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnAddToBill" buttonType="RAISED" disable="true" layoutX="184.0" layoutY="425.0" onAction="#addToBillOnAction" prefHeight="37.0" prefWidth="116.0" style="-fx-background-color: E73403;" text="Add to Bill" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="25.0" layoutY="14.0" prefHeight="30.0" prefWidth="123.0" text="Meal Details">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblOrderId" alignment="CENTER_RIGHT" layoutX="322.0" layoutY="19.0" prefHeight="21.0" prefWidth="130.0" text="Order ID">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="971.0" layoutY="7.0" prefHeight="70.0" prefWidth="157.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+               <children>
+                  <Label fx:id="lblDate" alignment="CENTER" layoutX="-2.0" layoutY="1.0" prefHeight="21.0" prefWidth="157.0" text="dd/mm/yyyy">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" alignment="CENTER" layoutX="-2.0" layoutY="22.0" prefHeight="47.0" prefWidth="157.0" text="hh/mm">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="44.0" layoutY="130.0" prefHeight="476.0" prefWidth="164.0" style="-fx-background-color: white;" styleClass="pane-two">
+               <children>
+                  <Label layoutX="15.0" layoutY="15.0" prefHeight="30.0" prefWidth="123.0" text="Meal Types">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblDish" layoutX="14.0" layoutY="60.0" prefHeight="400.0" prefWidth="136.0">
+                    <columns>
+                      <TableColumn fx:id="colDish" prefWidth="135.0" text="Main Dish" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

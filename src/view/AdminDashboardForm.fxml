@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainContext" prefHeight="713.0" prefWidth="1367.0" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminDashboardFormController">
+   <children>
+      <Pane prefHeight="59.0" prefWidth="1368.0" style="-fx-background-color: #5050FF;">
+         <children>
+            <Label alignment="CENTER" prefHeight="59.0" prefWidth="260.0" text="White Star Hotel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Label>
+            <JFXButton graphicTextGap="6.0" layoutX="1232.0" layoutY="7.0" onAction="#logOutOnAction" prefHeight="44.0" prefWidth="136.0" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_logout_rounded_up_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="button-two" />
+                  <String fx:value="button-one" />
+               </styleClass>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutY="59.0" prefHeight="655.0" prefWidth="233.0" style="-fx-background-color: #2C3539;">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="74.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/icons8_test_account_50px_1.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblUserName" layoutX="117.0" layoutY="14.0" prefHeight="37.0" prefWidth="115.0" text="&lt;user&gt;" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="117.0" layoutY="41.0" prefHeight="45.0" prefWidth="100.0" text="Admin" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="12.0" fitWidth="16.0" layoutX="101.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/icons8_new_moon_50px.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="btnDashboard" alignment="TOP_LEFT" graphicTextGap="10.0" layoutX="6.0" layoutY="177.0" onAction="#openAdminDashboardOnAction" prefHeight="44.0" prefWidth="220.0" style="-fx-background-color: #F24937;" styleClass="button-one" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_dashboard_30px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnRooms" alignment="TOP_LEFT" graphicTextGap="12.0" layoutX="7.0" layoutY="221.0" onAction="#openAdminRoomsOnAction" prefHeight="44.0" prefWidth="220.0" styleClass="button-one" text="Rooms" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_bed_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnHalls" alignment="TOP_LEFT" graphicTextGap="12.0" layoutX="6.0" layoutY="265.0" onAction="#openAdminHallsOnAction" prefHeight="44.0" prefWidth="220.0" styleClass="button-one" text="Halls" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_curtains_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnServices" alignment="TOP_LEFT" graphicTextGap="12.0" layoutX="6.0" layoutY="309.0" onAction="#openAdminServiceOnAction" prefHeight="44.0" prefWidth="220.0" styleClass="button-one" text="Services" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_broadcasting_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnMealPackage" alignment="TOP_LEFT" graphicTextGap="12.0" layoutX="6.0" layoutY="353.0" onAction="#openAdminMealPackagesOnAction" prefHeight="44.0" prefWidth="220.0" styleClass="button-one" text="Meal Packages" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_meal_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnEmployee" alignment="TOP_LEFT" graphicTextGap="12.0" layoutX="6.0" layoutY="397.0" onAction="#openAdminEmployeesOnAction" prefHeight="44.0" prefWidth="220.0" styleClass="button-one" text="Employees" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_crowd_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnComplain" alignment="TOP_LEFT" graphicTextGap="12.0" layoutX="6.0" layoutY="441.0" onAction="#openAdminComplainsOnAction" prefHeight="44.0" prefWidth="220.0" styleClass="button-one" text="Complains" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_commercial_50px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnUsers" alignment="TOP_LEFT" graphicTextGap="12.0" layoutX="6.0" layoutY="485.0" onAction="#openAdminUsersOnAction" prefHeight="44.0" prefWidth="220.0" styleClass="button-one" text="Users" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets bottom="10.0" top="10.0" />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_add_administrator_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label alignment="CENTER" layoutY="122.0" opacity="0.5" prefHeight="29.0" prefWidth="233.0" style="-fx-background-color: #7C8589;" text="MAIN NAVIGATION" textFill="#2c3539">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="subContext" layoutX="233.0" layoutY="59.0" prefHeight="655.0" prefWidth="1135.0" style="-fx-background-color: E9EEF9;">
+         <opaqueInsets>
+            <Insets bottom="10.0" top="10.0" />
+         </opaqueInsets>
+         <children>
+            <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="67.0" prefWidth="957.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+               <children>
+                  <Label layoutX="78.0" prefHeight="70.0" prefWidth="182.0" text="Dashboard">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="33.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/images/icons8_dashboard_30px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Pane layoutX="971.0" layoutY="7.0" prefHeight="70.0" prefWidth="157.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+               <children>
+                  <Label fx:id="lblDate" alignment="CENTER" layoutX="4.0" prefHeight="29.0" prefWidth="157.0" text="dd/mm/yyyy">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" alignment="CENTER" layoutY="24.0" prefHeight="30.0" prefWidth="157.0" text="hh/mm">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="53.0" layoutY="98.0" prefHeight="260.0" prefWidth="402.0" style="-fx-background-color: white;" styleClass="pane-two">
+               <children>
+                  <Pane layoutX="64.0" layoutY="68.0" prefHeight="83.0" prefWidth="275.0" style="-fx-background-color: #5773F1;" styleClass="pane-one">
+                     <children>
+                        <Label alignment="CENTER" layoutX="1.0" layoutY="9.0" prefHeight="21.0" prefWidth="275.0" text="Total Ernings" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblTotalEarning" alignment="CENTER" layoutX="1.0" layoutY="30.0" prefHeight="45.0" prefWidth="275.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Label layoutX="14.0" layoutY="14.0" text="Total Earnings Report">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="64.0" layoutY="163.0" prefHeight="83.0" prefWidth="275.0" style="-fx-background-color: #5773F1;" styleClass="pane-one">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-2.0" layoutY="14.0" prefHeight="21.0" prefWidth="283.0" text="Pending Ernings" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblPendingEarning" alignment="CENTER" layoutX="2.0" layoutY="35.0" prefHeight="45.0" prefWidth="275.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <JFXButton layoutX="234.0" layoutY="23.0" onAction="#monthlyIncomeOnAction" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: white;" styleClass="btn-check" text="MONTHLY" textFill="#5773f1">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton layoutX="318.0" layoutY="23.0" onAction="#annuallyIncomeOnAction" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: white;" styleClass="btn-check" text="ANNUALLY" textFill="#5773f1">
+                     <font>
+                        <Font name="System Bold" size="9.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane layoutX="486.0" layoutY="96.0" prefHeight="524.0" prefWidth="612.0" style="-fx-background-color: white;" styleClass="pane-two">
+               <children>
+                  <Label layoutX="22.0" layoutY="13.0" text="Anunal Earnings Calculation">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <LineChart fx:id="lineChartRestaurants" layoutX="34.0" layoutY="284.0" prefHeight="240.0" prefWidth="545.0" title="RESTAURANTS">
+                    <xAxis>
+                      <CategoryAxis prefWidth="488.0" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <LineChart fx:id="lineChartHotel" layoutX="32.0" layoutY="34.0" prefHeight="240.0" prefWidth="545.0" title="HOTEL">
+                     <xAxis>
+                        <CategoryAxis prefWidth="488.0" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis side="LEFT" />
+                     </yAxis>
+                  </LineChart>
+               </children>
+            </Pane>
+            <Pane layoutX="52.0" layoutY="383.0" prefHeight="240.0" prefWidth="402.0" style="-fx-background-color: white;" styleClass="pane-two">
+               <children>
+                  <Label layoutX="14.0" layoutY="4.0" text="Restaurants Earnings Report">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="64.0" layoutY="79.0" prefHeight="83.0" prefWidth="275.0" style="-fx-background-color: #5773F1;" styleClass="pane-one">
+                     <children>
+                        <Label alignment="CENTER" layoutX="-2.0" layoutY="14.0" prefHeight="21.0" prefWidth="283.0" text="Total Ernings" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblRestaurantsEarning" alignment="CENTER" layoutX="2.0" layoutY="35.0" prefHeight="45.0" prefWidth="275.0" text="0" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

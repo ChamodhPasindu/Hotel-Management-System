@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="655.0" prefWidth="1135.0" style="-fx-background-color: E9EEF9;" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminUsersFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="67.0" prefWidth="957.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label layoutX="86.0" prefHeight="70.0" prefWidth="182.0" text="Users">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="33.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/icons8_add_administrator_50px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="82.0" layoutY="143.0" prefHeight="430.0" prefWidth="435.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" text="Add New User">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUserName1" layoutX="52.0" layoutY="131.0" prefHeight="25.0" prefWidth="241.0" promptText="User Name">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXTextField>
+            <JFXPasswordField fx:id="txtPassword1" layoutX="52.0" layoutY="184.0" prefHeight="25.0" prefWidth="241.0" promptText="User Password">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXPasswordField>
+            <JFXPasswordField fx:id="txtReEnterPassword1" disable="true" layoutX="52.0" layoutY="269.0" prefHeight="25.0" prefWidth="241.0" promptText="Re-Enter User Password">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXPasswordField>
+            <JFXComboBox fx:id="cmbUserRole1" layoutX="52.0" layoutY="76.0" prefHeight="25.0" prefWidth="101.0" promptText="User Role" />
+            <JFXButton fx:id="btnCreateAccount" buttonType="RAISED" disable="true" layoutX="173.0" layoutY="362.0" onAction="#createAccountOnAction" prefHeight="35.0" prefWidth="157.0" style="-fx-background-color: #0B62A4;" text="CREATE ACCOUNT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="603.0" layoutY="143.0" prefHeight="431.0" prefWidth="435.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label layoutX="25.0" layoutY="15.0" text="Manage User Account ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUserName2" layoutX="60.0" layoutY="126.0" prefHeight="25.0" prefWidth="241.0" promptText="User Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbUserRole2" layoutX="61.0" layoutY="75.0" prefHeight="25.0" prefWidth="101.0" promptText="User Role" />
+            <JFXButton fx:id="btnSearchAccount" buttonType="RAISED" disable="true" layoutX="169.0" layoutY="220.0" onAction="#searchAccountOnAction" prefHeight="29.0" prefWidth="133.0" style="-fx-background-color: F24937;" text="SEARCH ACCOUNT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXPasswordField fx:id="txtPassword2" layoutX="61.0" layoutY="178.0" prefHeight="25.0" prefWidth="241.0" promptText="User Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="txtReEnterPassword2" disable="true" layoutX="62.0" layoutY="275.0" prefHeight="25.0" prefWidth="241.0" promptText="Enter New Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" disable="true" layoutX="144.0" layoutY="352.0" onAction="#updateAccountOnAction" prefHeight="35.0" prefWidth="157.0" style="-fx-background-color: #0B62A4;" text="UPDATE ACCOUNT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <Pane layoutX="971.0" layoutY="7.0" prefHeight="70.0" prefWidth="157.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="-2.0" layoutY="1.0" prefHeight="21.0" prefWidth="157.0" text="dd/mm/yyyy">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" alignment="CENTER" layoutX="-2.0" layoutY="22.0" prefHeight="47.0" prefWidth="157.0" text="hh/mm">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

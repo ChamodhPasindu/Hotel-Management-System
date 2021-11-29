@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="543.0" prefWidth="466.0" style="-fx-background-color: #E9EEF9;" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RecAddGuestFormController">
+   <children>
+      <Pane layoutX="21.0" layoutY="105.0" prefHeight="420.0" prefWidth="425.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <JFXComboBox fx:id="cmbTitle" layoutX="78.0" layoutY="21.0" prefHeight="25.0" prefWidth="66.0" promptText="Title" />
+            <JFXTextField fx:id="txtCustomerName" layoutX="76.0" layoutY="69.0" onKeyReleased="#TextFieldKeyReleased" prefHeight="25.0" prefWidth="274.0" promptText="Customer Name    " />
+            <JFXTextField fx:id="txtNic" layoutX="76.0" layoutY="121.0" onKeyReleased="#TextFieldKeyReleased" prefHeight="25.0" prefWidth="274.0" promptText="NIC                        " />
+            <JFXTextField fx:id="txtMobile" layoutX="76.0" layoutY="159.0" onKeyReleased="#TextFieldKeyReleased" prefHeight="25.0" prefWidth="274.0" promptText="Mobile                   " />
+            <JFXTextField fx:id="txtEmail" layoutX="76.0" layoutY="197.0" onKeyReleased="#TextFieldKeyReleased" prefHeight="25.0" prefWidth="274.0" promptText="Email                      " />
+            <JFXButton fx:id="btnAddGuest" buttonType="RAISED" layoutX="49.0" layoutY="364.0" onAction="#addGuestOnAction" prefHeight="42.0" prefWidth="327.0" style="-fx-background-color: #0B62A4;" text="ADD GUEST" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="lblCustomerId" alignment="CENTER_RIGHT" layoutX="241.0" layoutY="21.0" prefHeight="25.0" prefWidth="109.0" text="Customer ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtAddress" alignment="TOP_LEFT" layoutX="76.0" layoutY="236.0" onKeyReleased="#TextFieldKeyReleased" prefHeight="60.0" prefWidth="274.0" promptText="Address" />
+            <JFXComboBox fx:id="cmbProvince" layoutX="78.0" layoutY="318.0" onKeyReleased="#TextFieldKeyReleased" prefHeight="25.0" prefWidth="274.0" promptText="Province" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="21.0" layoutY="18.0" prefHeight="70.0" prefWidth="425.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label layoutX="32.0" prefHeight="70.0" prefWidth="182.0" text="Add Guest">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

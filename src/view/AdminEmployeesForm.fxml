@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="655.0" prefWidth="1135.0" stylesheets="@assets/style/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminEmployeesFormController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="67.0" prefWidth="957.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label layoutX="84.0" prefHeight="70.0" prefWidth="182.0" text="Employees">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="33.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/images/icons8_crowd_50px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="25.0" layoutY="149.0" prefHeight="481.0" prefWidth="492.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <Label fx:id="lblEmployeeId" layoutX="22.0" layoutY="54.0" prefHeight="21.0" prefWidth="97.0" text="Employee ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtMobile" layoutX="157.0" layoutY="106.0" prefHeight="31.0" prefWidth="116.0" promptText="Mobile" />
+            <JFXTextField fx:id="txtEmail" layoutX="156.0" layoutY="261.0" prefHeight="31.0" prefWidth="213.0" promptText="Email" />
+            <JFXTextField fx:id="txtAddress" alignment="TOP_LEFT" layoutX="156.0" layoutY="307.0" prefHeight="89.0" prefWidth="213.0" promptText="Address">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="14.0" layoutY="14.0" text="Update Employee Details">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="410.0" layoutY="437.0" onAction="#updateOnAction" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #0B62A4;" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtName" layoutX="156.0" layoutY="50.0" prefHeight="21.0" prefWidth="300.0" promptText="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbGender" layoutX="157.0" layoutY="151.0" prefHeight="25.0" prefWidth="116.0" promptText="Gender" />
+            <JFXTextField fx:id="txtNic" layoutX="157.0" layoutY="188.0" prefHeight="25.0" prefWidth="116.0" promptText="NIC" />
+            <JFXTextField fx:id="txtDob" layoutX="157.0" layoutY="226.0" prefHeight="25.0" prefWidth="116.0" promptText="DOB" />
+            <JFXDatePicker fx:id="txtJoinDate" defaultColor="#130893" layoutX="338.0" layoutY="113.0" prefHeight="25.0" prefWidth="116.0" promptText="Join Date" />
+            <JFXComboBox fx:id="cmbDepartment" layoutX="338.0" layoutY="151.0" prefHeight="25.0" prefWidth="116.0" promptText="department" />
+            <JFXTextField fx:id="txtSalary" layoutX="338.0" layoutY="189.0" prefHeight="25.0" prefWidth="116.0" promptText="Salary" />
+            <Label fx:id="lblDepartmentId" layoutX="22.0" layoutY="92.0" prefHeight="21.0" prefWidth="116.0" text="Department ID">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="537.0" layoutY="149.0" prefHeight="481.0" prefWidth="574.0" style="-fx-background-color: white;" styleClass="pane-two">
+         <children>
+            <TableView fx:id="tblEmployeeList" layoutX="35.0" layoutY="69.0" prefHeight="357.0" prefWidth="505.0">
+               <columns>
+                  <TableColumn fx:id="colEmployeeId" prefWidth="150.0" text="Employee ID" />
+                  <TableColumn fx:id="colName" prefWidth="217.0" text="Name" />
+                  <TableColumn fx:id="colDepartment" prefWidth="137.0" text="Department" />
+               </columns>
+            </TableView>
+            <Label layoutX="17.0" layoutY="14.0" text="Employee List">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnDelete" buttonType="RAISED" layoutX="372.0" layoutY="437.0" onAction="#deleteOnAction" prefHeight="29.0" prefWidth="68.0" style="-fx-background-color: DD4B39;" text="Delete" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="btnView" buttonType="RAISED" layoutX="454.0" layoutY="437.0" onAction="#viewOnAction" prefHeight="30.0" prefWidth="68.0" style="-fx-background-color: #0B62A4;" text="View" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <JFXButton buttonType="RAISED" layoutX="25.0" layoutY="95.0" onAction="#openAddEmployeeOnAction" prefHeight="35.0" prefWidth="144.0" style="-fx-background-color: #0B62A4;" text="ADD EMPLOYEE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Pane layoutX="971.0" layoutY="7.0" prefHeight="70.0" prefWidth="157.0" style="-fx-background-color: A1B7AD;" styleClass="pane-two">
+         <children>
+            <Label fx:id="lblDate" alignment="CENTER" layoutX="-2.0" layoutY="1.0" prefHeight="21.0" prefWidth="157.0" text="dd/mm/yyyy">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" alignment="CENTER" layoutX="-2.0" layoutY="22.0" prefHeight="47.0" prefWidth="157.0" text="hh/mm">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtSearchName" layoutX="584.0" layoutY="100.0" prefHeight="30.0" prefWidth="338.0" promptText="Search Employee Name" styleClass="text-search">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="21.0" fitWidth="23.0" layoutX="892.0" layoutY="104.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assets/images/icons8_search_30px_1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
