@@ -40,7 +40,7 @@ public class UserController {
     }
 
     public String userLogin(String name,String password) throws SQLException {
-        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT userRole FROM USERS WHERE userName=? AND userPassword=?");
+        PreparedStatement stm = DbConnection.getInstance().getConnection().prepareStatement("SELECT userRole FROM Users WHERE userName=? AND userPassword=?");
         stm.setObject(1,name);
         stm.setObject(2,password);
         ResultSet resultSet = stm.executeQuery();

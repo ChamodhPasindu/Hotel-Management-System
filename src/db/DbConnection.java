@@ -14,7 +14,7 @@ public class DbConnection {
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost/Hotel",
                     "root",
-                    "1234");
+                    "root1234");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
